@@ -3,6 +3,10 @@ import os
 
 from vimba import *
 
+# Configure settings on Vimba Viewer
+# Allow 16-bit 
+# Mono12 packed
+
 # Makes a directory to store images
 directory = 'data_collection'
 os.mkdir(directory)
