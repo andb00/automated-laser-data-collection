@@ -16,7 +16,18 @@ os.mkdir(directory)
 
 # Call for camera to be used
 with Vimba.get_instance() as vimba:
+    print("--> Vimba has been started")
     cams = vimba.get_all_cameras()
+     print("--> Camera has been opened (%s)" % cam.get_id())
+
+# Save camera settings to file.
+        settings_file = '{}_settings.xml'.format(cam.get_id())
+        cam.save_settings(settings_file, PersistType.All)
+        print("--> Feature values have been saved to '%s'" % settings_file)
+
+# Load camera settings from file.
+        cam.load_settings(settings_file, PersistType.All)
+        print("--> Feature values have been loaded from given file '%s'" % settings_file)
 
     with cams[0] as cam:
 
