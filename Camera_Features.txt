@@ -1,0 +1,1520 @@
+C:\Users\fdskj\PycharmProjects\pythonProject\venv\Scripts\python.exe C:\Users\fdskj\PycharmProjects\pythonProject\features.py
+///////////////////////////////////////
+/// Vimba API List Features Example ///
+///////////////////////////////////////
+
+Print all features of camera 'DEV_000F315BA50A':
+/// Feature name   : AcquisitionAbort
+/// Display name   : AcquisitionAbort
+/// Tooltip        :
+/// Description    : Abort acquisition. Acquisition will stop immediately, but a partially transferred image will be completed.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : AcquisitionFrameCount
+/// Display name   : AcquisitionFrameCount
+/// Tooltip        :
+/// Description    : This is the number of images to acquire when in MultiFrame and Recorder acquisition modes.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1
+
+/// Feature name   : AcquisitionFrameRateAbs
+/// Display name   : AcquisitionFrameRateAbs
+/// Tooltip        :
+/// Description    : Frame rate, in frames per second. This is applicable when either the FrameStart trigger mode is disabled, or the FrameStart trigger source is FixedRate. Depending on the exposure duration, the camera may not achieve the frame rate set here.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 30.33520400424693
+
+/// Feature name   : AcquisitionFrameRateLimit
+/// Display name   : AcquisitionFrameRateLimit
+/// Tooltip        :
+/// Description    : This is the maximum frame rate possible for the current exposure duration and image format.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 30.33520400424693
+
+/// Feature name   : AcquisitionMode
+/// Display name   : AcquisitionMode
+/// Tooltip        :
+/// Description    : The acquisition mode determines the behavior of the camera when acquisition start is triggered. "Continuous" mode: the camera will acquire images until acquisition stop is triggered. "SingleFrame" mode: the camera will acquire a single image. "MultiFrame" mode: the camera will acquire the number of images specified by AcquisitionFrameCount. "Recorder" mode: the camera will run continuously, and when the recorder event is triggered, send pre-trigger and post-trigger images to the host.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Continuous
+
+/// Feature name   : AcquisitionStart
+/// Display name   : AcquisitionStart
+/// Tooltip        :
+/// Description    : Start acquisition. Before image acquisition can occur, acquisition must be started, either by a hardware trigger or this software command.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : AcquisitionStop
+/// Display name   : AcquisitionStop
+/// Tooltip        :
+/// Description    : Stop acquisition. Acquisition will stop after acquisition of the current frame is complete.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : BandwidthControlMode
+/// Display name   : BandwidthControlMode
+/// Tooltip        :
+/// Description    : Bandwidth allocation can be controlled by StreamBytesPerSecond, or by register SCPD0. If you do not understand SCPD0 and how this driver uses this register, leave this set to "StreamBytesPerSecond".
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : StreamBytesPerSecond
+
+/// Feature name   : BinningHorizontal
+/// Display name   : BinningHorizontal
+/// Tooltip        :
+/// Description    : Binning in horizontal direction. Binning is the summing of charge of adjacent pixels.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1
+
+/// Feature name   : BinningVertical
+/// Display name   : BinningVertical
+/// Tooltip        :
+/// Description    : Binning in vertical direction. Binning is the summing of charge of adjacent pixels.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1
+
+/// Feature name   : BlackLevel
+/// Display name   : BlackLevel
+/// Tooltip        :
+/// Description    : Black level (offset) value.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 0.0
+
+/// Feature name   : BlackLevelSelector
+/// Display name   : BlackLevelSelector
+/// Tooltip        :
+/// Description    : Selects which Black Level is controlled by the various Black Level features.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : All
+
+/// Feature name   : ChunkModeActive
+/// Display name   : ChunkModeActive
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : False
+
+/// Feature name   : DSPSubregionBottom
+/// Display name   : DSPSubregionBottom
+/// Tooltip        :
+/// Description    : The DSP subregion is the area of the image used for measurements in "auto-" functions such as auto-exposure and auto-gain. DSPSubregionBottom is the bottom row, relative to the current image region. For convenience, this value may be higher than the maximum Height.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 964
+
+/// Feature name   : DSPSubregionLeft
+/// Display name   : DSPSubregionLeft
+/// Tooltip        :
+/// Description    : The DSP subregion is the area of the image used for measurements in "auto-" functions such as auto-exposure and auto-gain. DSPSubregionLeft is the left column, relative to the current image region.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : DSPSubregionRight
+/// Display name   : DSPSubregionRight
+/// Tooltip        :
+/// Description    : The DSP subregion is the area of the image used for measurements in "auto-" functions such as auto-exposure and auto-gain. DSPSubregionRight is the right column, relative to the current image region. For convenience, this value may be higher than the maximum Width.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 1292
+
+/// Feature name   : DSPSubregionTop
+/// Display name   : DSPSubregionTop
+/// Tooltip        :
+/// Description    : The DSP subregion is the area of the image used for measurements in "auto-" functions such as auto-exposure and auto-gain. DSPSubregionTop is the top row, relative to the current image region.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : DeviceFirmwareVersion
+/// Display name   : DeviceFirmwareVersion
+/// Tooltip        :
+/// Description    : Firmware version of this AVT GigE camera.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 00.01.54.17933
+
+/// Feature name   : DeviceID
+/// Display name   : DeviceID
+/// Tooltip        :
+/// Description    : Serial number.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 50-0536877194
+
+/// Feature name   : DeviceModelName
+/// Display name   : DeviceModelName
+/// Tooltip        :
+/// Description    : Camera model name.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Mako G-125B
+
+/// Feature name   : DevicePartNumber
+/// Display name   : DevicePartNumber
+/// Tooltip        :
+/// Description    : Device part number.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 5054
+
+/// Feature name   : DeviceScanType
+/// Display name   : DeviceScanType
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Areascan
+
+/// Feature name   : DeviceTemperature
+/// Display name   : DeviceTemperature
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 57.84299850463867
+
+/// Feature name   : DeviceTemperatureSelector
+/// Display name   : DeviceTemperatureSelector
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Main
+
+/// Feature name   : DeviceUserID
+/// Display name   : DeviceUserID
+/// Tooltip        :
+/// Description    : User-programmable Device Identifier.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          :
+
+/// Feature name   : DeviceVendorName
+/// Display name   : DeviceVendorName
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Allied Vision Technologies
+
+/// Feature name   : EventAcquisitionEnd
+/// Display name   : EventAcquisitionEnd
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40001
+
+/// Feature name   : EventAcquisitionEndFrameID
+/// Display name   : EventAcquisitionEndFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventAcquisitionEndTimestamp
+/// Display name   : EventAcquisitionEndTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventAcquisitionRecordTrigger
+/// Display name   : EventAcquisitionRecordTrigger
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 40004
+
+/// Feature name   : EventAcquisitionRecordTriggerFrameID
+/// Display name   : EventAcquisitionRecordTriggerFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventAcquisitionRecordTriggerTimestamp
+/// Display name   : EventAcquisitionRecordTriggerTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventAcquisitionStart
+/// Display name   : EventAcquisitionStart
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40000
+
+/// Feature name   : EventAcquisitionStartFrameID
+/// Display name   : EventAcquisitionStartFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventAcquisitionStartTimestamp
+/// Display name   : EventAcquisitionStartTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventError
+/// Display name   : EventError
+/// Tooltip        :
+/// Description    : ID value of error event. The error event occurs if there is a problem on the camera; this event should be reported to technical support. If you use the message channel for event notification, you are always subscribed to this event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 65535
+
+/// Feature name   : EventErrorFrameID
+/// Display name   : EventErrorFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventErrorTimestamp
+/// Display name   : EventErrorTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventExposureEnd
+/// Display name   : EventExposureEnd
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40003
+
+/// Feature name   : EventExposureEndFrameID
+/// Display name   : EventExposureEndFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventExposureEndTimestamp
+/// Display name   : EventExposureEndTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventExposureStart
+/// Display name   : EventExposureStart
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40019
+
+/// Feature name   : EventExposureStartFrameID
+/// Display name   : EventExposureStartFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventExposureStartTimestamp
+/// Display name   : EventExposureStartTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventFrameTrigger
+/// Display name   : EventFrameTrigger
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40002
+
+/// Feature name   : EventFrameTriggerFrameID
+/// Display name   : EventFrameTriggerFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventFrameTriggerReady
+/// Display name   : EventFrameTriggerReady
+/// Tooltip        : ID value of event.
+/// Description    : ID value of Frame Trigger Ready event. The Frame Trigger event occurs when the camera is ready for another frame aquisition
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40018
+
+/// Feature name   : EventFrameTriggerReadyFrameID
+/// Display name   : EventFrameTriggerReadyFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventFrameTriggerReadyTimestamp
+/// Display name   : EventFrameTriggerReadyTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventFrameTriggerTimestamp
+/// Display name   : EventFrameTriggerTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventLine1FallingEdge
+/// Display name   : EventLine1FallingEdge
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40011
+
+/// Feature name   : EventLine1FallingEdgeFrameID
+/// Display name   : EventLine1FallingEdgeFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventLine1FallingEdgeTimestamp
+/// Display name   : EventLine1FallingEdgeTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventLine1RisingEdge
+/// Display name   : EventLine1RisingEdge
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40010
+
+/// Feature name   : EventLine1RisingEdgeFrameID
+/// Display name   : EventLine1RisingEdgeFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventLine1RisingEdgeTimestamp
+/// Display name   : EventLine1RisingEdgeTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventLine2FallingEdge
+/// Display name   : EventLine2FallingEdge
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40013
+
+/// Feature name   : EventLine2RisingEdge
+/// Display name   : EventLine2RisingEdge
+/// Tooltip        :
+/// Description    : ID value of event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 40012
+
+/// Feature name   : EventNotification
+/// Display name   : EventNotification
+/// Tooltip        :
+/// Description    : Activate event-notification on the GigE Vision message channel.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Off
+
+/// Feature name   : EventOverflow
+/// Display name   : EventOverflow
+/// Tooltip        :
+/// Description    : ID value of overflow event. The overflow event occurs when one or more notification events are lost on the camera. If you use the message channel for event notification, you are always subscribed to this event.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 65534
+
+/// Feature name   : EventOverflowFrameID
+/// Display name   : EventOverflowFrameID
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventOverflowTimestamp
+/// Display name   : EventOverflowTimestamp
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : EventSelector
+/// Display name   : EventSelector
+/// Tooltip        :
+/// Description    : Activate event-notification on the GigE Vision message channel.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : ExposureStart
+
+/// Feature name   : EventsEnable1
+/// Display name   : EventsEnable1
+/// Tooltip        :
+/// Description    : Activate event-notification on the GigE Vision message channel. For programmers. See register documentation.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : ExposureAuto
+/// Display name   : ExposureAuto
+/// Tooltip        :
+/// Description    : Method used to set exposure duration, ExposureTimeAbs in Timed mode. Off: automatic mode is off. Once: auto-exposure occurs until target is achieved, then ExposureAuto returns to Off. Continuous: auto-exposure always runs.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Off
+
+/// Feature name   : ExposureAutoAdjustTol
+/// Display name   : ExposureAutoAdjustTol
+/// Tooltip        :
+/// Description    : Tolerance, in percent, allowed from the ideal exposure value, within which the auto-exposure does not run. This prevents needless small adjustments from occurring each image.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 5
+
+/// Feature name   : ExposureAutoAlg
+/// Display name   : ExposureAutoAlg
+/// Tooltip        :
+/// Description    : Algorithm used for auto-exposure. Mean: target a particular mean value of all measured pixels in the image. FitRange: adjust the maximum pixel value to fit the sensor range.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : Mean
+
+/// Feature name   : ExposureAutoMax
+/// Display name   : ExposureAutoMax
+/// Tooltip        :
+/// Description    : Maximum auto-exposure value, in microseconds.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 500000
+
+/// Feature name   : ExposureAutoMin
+/// Display name   : ExposureAutoMin
+/// Tooltip        :
+/// Description    : Minimum auto-exposure value, in microseconds.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 12
+
+/// Feature name   : ExposureAutoOutliers
+/// Display name   : ExposureAutoOutliers
+/// Tooltip        :
+/// Description    : Number of upper outliers to discard before calculating exposure adjustments. This is in ten-thousandths of the number pixels in the image.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : ExposureAutoRate
+/// Display name   : ExposureAutoRate
+/// Tooltip        :
+/// Description    : Rate of exposure adjustments, from 1 (slowest) to 100 (fastest). Use this control to slow down the auto-exposure adjustments.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 100
+
+/// Feature name   : ExposureAutoTarget
+/// Display name   : ExposureAutoTarget
+/// Tooltip        :
+/// Description    : When ExposureAutoAlg is Mean, this is the target image mean value, in percent. Higher values result in brighter images.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 50
+
+/// Feature name   : ExposureMode
+/// Display name   : ExposureMode
+/// Tooltip        :
+/// Description    : Method of control for exposure duration. Timed: exposure duration is set by ExposureTimeAbs. TriggerWidth: exposure controlled by external trigger pulse.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Timed
+
+/// Feature name   : ExposureTimeAbs
+/// Display name   : ExposureTimeAbs
+/// Tooltip        :
+/// Description    : Exposure duration in microseconds. Timed: Sensor integration time. TriggerWidth: Ignored.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 15000.0
+
+/// Feature name   : FirmwareVerBuild
+/// Display name   : FirmwareVerBuild
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 17933
+
+/// Feature name   : FirmwareVerMajor
+/// Display name   : FirmwareVerMajor
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 1
+
+/// Feature name   : FirmwareVerMinor
+/// Display name   : FirmwareVerMinor
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 54
+
+/// Feature name   : GVCPCmdRetries
+/// Display name   : Command Retries
+/// Tooltip        :
+/// Description    : Number of time a particular command to the device will be resent when no answer is being received.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 5
+
+/// Feature name   : GVCPCmdTimeout
+/// Display name   : Command Timeout
+/// Tooltip        :
+/// Description    : Timeout waiting for an answer from the device.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 250
+
+/// Feature name   : GVSPAdjustPacketSize
+/// Display name   : GVSP Adjust Packet Size
+/// Tooltip        :
+/// Description    : Request the packet size used to be adjusted automatically.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : GVSPBurstSize
+/// Display name   : GVSP Burst Size
+/// Tooltip        :
+/// Description    : Maximum number of GVSP packets to be processed in a burst.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 1
+
+/// Feature name   : GVSPDriver
+/// Display name   : GVSP Driver Selector
+/// Tooltip        :
+/// Description    : Streaming driver to be used.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : Filter
+
+/// Feature name   : GVSPFilterVersion
+/// Display name   : GVSP Filter Version
+/// Tooltip        :
+/// Description    : Version of the GVSP Filter driver.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 02.05.07
+
+/// Feature name   : GVSPHostReceiveBufferSize
+/// Display name   : GVSP Host Receive Buffer Size
+/// Tooltip        :
+/// Description    : Number of bytes to be used by the OS' socket (hint, SO_RCVBUF). The internally used value might be limited by the OS (e.g. /proc/sys/net/core/rmem_max).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : GVSPMaxLookBack
+/// Display name   : GVSP Max Look Back
+/// Tooltip        :
+/// Description    : Size of the missing GVSP packets detection windows.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 30
+
+/// Feature name   : GVSPMaxRequests
+/// Display name   : GVSP Max Requests
+/// Tooltip        :
+/// Description    : Maximum number of requests (to the device) for a missing GVSP packet.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 1
+
+/// Feature name   : GVSPMaxWaitSize
+/// Display name   : GVSP Max Wait Size
+/// Tooltip        :
+/// Description    : Maximum number of received GVSP packets following a resend request to wait before requesting again.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 100
+
+/// Feature name   : GVSPMissingSize
+/// Display name   : GVSP Missing Size
+/// Tooltip        :
+/// Description    : Maximum number of simultaneous missing GVSP packets before dropping the frame (0 = OFF).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 256
+
+/// Feature name   : GVSPPacketSize
+/// Display name   : GVSP Packet Size
+/// Tooltip        :
+/// Description    : GVSP Packet size (in bytes).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 1500
+
+/// Feature name   : GVSPTiltingSize
+/// Display name   : GVSP Tilting Size
+/// Tooltip        :
+/// Description    : Maximum number GVSP packets received from a following frame before dropping the frame (0 = OFF).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 100
+
+/// Feature name   : GVSPTimeout
+/// Display name   : GVSP Timeout
+/// Tooltip        :
+/// Description    : Timeout (in ms) used for stream packets (0 = OFF).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 70
+
+/// Feature name   : Gain
+/// Display name   : Gain
+/// Tooltip        :
+/// Description    : Gain value of analog A/D stage. Units are usually in dB.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 0.0
+
+/// Feature name   : GainAuto
+/// Display name   : GainAuto
+/// Tooltip        :
+/// Description    : Method used to set Gain. Off: automatic mode is off. Once: auto-gain occurs until target is achieved, then GainAuto returns to Off. Continuous: auto-gain always runs.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Off
+
+/// Feature name   : GainAutoAdjustTol
+/// Display name   : GainAutoAdjustTol
+/// Tooltip        :
+/// Description    : Tolerance, in percent, allowed from the ideal gain value, within which the auto-gain does not run. This prevents needless small adjustments from occurring each image.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 5
+
+/// Feature name   : GainAutoMax
+/// Display name   : GainAutoMax
+/// Tooltip        :
+/// Description    : Maximum auto-gain value.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 30.0
+
+/// Feature name   : GainAutoMin
+/// Display name   : GainAutoMin
+/// Tooltip        :
+/// Description    : Minimum auto-gain value.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0.0
+
+/// Feature name   : GainAutoOutliers
+/// Display name   : GainAutoOutliers
+/// Tooltip        :
+/// Description    : Number of upper outliers to discard before calculating gain adjustments. This is in ten-thousandths of the number pixels in the image.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : GainAutoRate
+/// Display name   : GainAutoRate
+/// Tooltip        :
+/// Description    : Rate of gain adjustments, from 1 (slowest) to 100 (fastest). Use this control to slow down the auto-gain adjustments.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 100
+
+/// Feature name   : GainAutoTarget
+/// Display name   : GainAutoTarget
+/// Tooltip        :
+/// Description    : This is the target image mean value, in percent.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 50
+
+/// Feature name   : GainSelector
+/// Display name   : GainSelector
+/// Tooltip        :
+/// Description    : (GenICam boilerplate. Always All.)
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : All
+
+/// Feature name   : Gamma
+/// Display name   : Gamma
+/// Tooltip        : Applies gamma value to the raw sensor signal.
+/// Description    : Applies gamma value to the raw sensor signal.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1.0
+
+/// Feature name   : GevCurrentDefaultGateway
+/// Display name   : Current Default Gateway
+/// Tooltip        :
+/// Description    : Current Default Gateway of the device.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : GevCurrentIPAddress
+/// Display name   : Current IP Address
+/// Tooltip        :
+/// Description    : Current IP address of the device.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 2852023097
+
+/// Feature name   : GevCurrentSubnetMask
+/// Display name   : Current Subnet Mask
+/// Tooltip        :
+/// Description    : Current Subnet Mask of the device.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 4294901760
+
+/// Feature name   : GevDeviceMACAddress
+/// Display name   : Device MAC Address
+/// Tooltip        :
+/// Description    : 48-bit MAC address of the GVCP interface of the selected remote device.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 65252599050
+
+/// Feature name   : GevHeartbeatInterval
+/// Display name   : Heartbeat Interval
+/// Tooltip        :
+/// Description    : Interval of time (in ms) after which a heartbeat is sent by the host.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 1450
+
+/// Feature name   : GevHeartbeatTimeout
+/// Display name   : Heartbeat Timeout
+/// Tooltip        :
+/// Description    : Interval of time (in ms) after which a device rejects control by a host if no heartbeat activity is registered.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 3000
+
+/// Feature name   : GevIPConfigurationMode
+/// Display name   : IP Configuration Mode
+/// Tooltip        :
+/// Description    : Current IP configuration mode.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : DHCP
+
+/// Feature name   : GevPersistentDefaultGateway
+/// Display name   : Persistent Default Gateway
+/// Tooltip        :
+/// Description    : Persistent Default Gateway of the device.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : GevPersistentIPAddress
+/// Display name   : Persistent IP Address
+/// Tooltip        :
+/// Description    : Persistent IP address of the device.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 2852021506
+
+/// Feature name   : GevPersistentSubnetMask
+/// Display name   : Persistent Subnet Mask
+/// Tooltip        :
+/// Description    : Persistent Subnet Mask of the device.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 4294967040
+
+/// Feature name   : GevSCPSPacketSize
+/// Display name   : GevSCPSPacketSize
+/// Tooltip        :
+/// Description    :
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1500
+
+/// Feature name   : GevTimestampControlLatch
+/// Display name   : GevTimestampControlLatch
+/// Tooltip        :
+/// Description    : Capture timestamp and store in GevTimestampValue.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : GevTimestampControlReset
+/// Display name   : GevTimestampControlReset
+/// Tooltip        :
+/// Description    : Reset the timestamp.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : GevTimestampTickFrequency
+/// Display name   : GevTimestampTickFrequency
+/// Tooltip        :
+/// Description    : Frequency of image timestamp, in Hertz.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1000000000
+
+/// Feature name   : GevTimestampValue
+/// Display name   : GevTimestampValue
+/// Tooltip        :
+/// Description    : Value of timestamp, when latched by GevTimestampControlLatch.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : Height
+/// Display name   : Height
+/// Tooltip        :
+/// Description    : Height of image, in pixels.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 964
+
+/// Feature name   : HeightMax
+/// Display name   : HeightMax
+/// Tooltip        :
+/// Description    : Maximum image height for the current image mode. Vertical binning, for example, will change this value.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 964
+
+/// Feature name   : ImageSize
+/// Display name   : ImageSize
+/// Tooltip        :
+/// Description    : Size of images, in bytes, for the current format and size.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 1868232
+
+/// Feature name   : LUTAddress
+/// Display name   : LUTAddress
+/// Tooltip        :
+/// Description    : Address of the memory area where the selected LUT is located (for raw memory transfer)
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 196608
+
+/// Feature name   : LUTBitDepthIn
+/// Display name   : LUTBitLengthIn
+/// Tooltip        :
+/// Description    : Bit length of the input value of the look up table block
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 12
+
+/// Feature name   : LUTBitDepthOut
+/// Display name   : LUTBitLengthOut
+/// Tooltip        :
+/// Description    : Bit length of the output value of the look up table block
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 12
+
+/// Feature name   : LUTEnable
+/// Display name   : LUTEnable
+/// Tooltip        :
+/// Description    : Activates the selected LUT.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : False
+
+/// Feature name   : LUTIndex
+/// Display name   : LUTIndex
+/// Tooltip        :
+/// Description    : Control the index of the coefficient to access in the selected look up table.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : LUTLoadAll
+/// Display name   : LUTLoadAll
+/// Tooltip        :
+/// Description    : Load all look up tables from Flash.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : LUTMode
+/// Display name   : LUTMode
+/// Tooltip        :
+/// Description    : Selects which mode is used for the selected look up table.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : Luminance
+
+/// Feature name   : LUTSaveAll
+/// Display name   : LUTSaveAll
+/// Tooltip        :
+/// Description    : Save all look up tables in Flash.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : LUTSelector
+/// Display name   : LUTSelector
+/// Tooltip        :
+/// Description    : Selects which look up table is used.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : LUT1
+
+/// Feature name   : LUTSizeBytes
+/// Display name   : LUTSize
+/// Tooltip        :
+/// Description    : Size of the memory area where the LUT is located
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 8192
+
+/// Feature name   : LUTValue
+/// Display name   : LUTValue
+/// Tooltip        :
+/// Description    : Returns the Value at entry LUTIndex of the selected look up table
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 4095
+
+/// Feature name   : MulticastEnable
+/// Display name   : Multicast Enable
+/// Tooltip        :
+/// Description    : Enable multicast streaming.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : False
+
+/// Feature name   : MulticastIPAddress
+/// Display name   : Multicast IP Address
+/// Tooltip        :
+/// Description    : IP address of the target multicasting group.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 4026470193
+
+/// Feature name   : NonImagePayloadSize
+/// Display name   : NonImagePayloadSize
+/// Tooltip        :
+/// Description    : Maximum size of chunk data, not including the image chunk, in the image block payload.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : OffsetX
+/// Display name   : OffsetX
+/// Tooltip        :
+/// Description    : Starting column of the readout region (relative to the first column of the sensor) in pixels.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : OffsetY
+/// Display name   : OffsetY
+/// Tooltip        :
+/// Description    : Starting row of the readout region (relative to the first row of the sensor) in pixels.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : PayloadSize
+/// Display name   : PayloadSize
+/// Tooltip        :
+/// Description    : Maximum size of image block payload.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1868232
+
+/// Feature name   : PixelFormat
+/// Display name   : PixelFormat
+/// Tooltip        :
+/// Description    : Format of the image data.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Mono12Packed
+
+/// Feature name   : RecorderPreEventCount
+/// Display name   : RecorderPreEventCount
+/// Tooltip        :
+/// Description    : This is the number of pre-event images to acquire in the Recorder acquisition mode. This must be less than or equal to AcquisitionFrameCount.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : SensorBits
+/// Display name   : SensorBits
+/// Tooltip        :
+/// Description    : Maximum bit depth of sensor.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 12
+
+/// Feature name   : SensorHeight
+/// Display name   : SensorHeight
+/// Tooltip        :
+/// Description    : Full height of image sensor.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 964
+
+/// Feature name   : SensorType
+/// Display name   : SensorType
+/// Tooltip        :
+/// Description    : Type of image sensor.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : Mono
+
+/// Feature name   : SensorWidth
+/// Display name   : SensorWidth
+/// Tooltip        :
+/// Description    : Full width of image sensor.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1292
+
+/// Feature name   : StatFrameDelivered
+/// Display name   : Stat Frames Delivered
+/// Tooltip        :
+/// Description    : Number of error-free frames that have been delivered to the TL consumer.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatFrameDropped
+/// Display name   : Stat Frames Dropped
+/// Tooltip        :
+/// Description    : Number of incomplete (due to missing packets) frames received by the host (not including shoved frames).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatFrameRate
+/// Display name   : Stat Frame Rate
+/// Tooltip        :
+/// Description    : Rate (frames/s) at which the device is sending frames to the host (derived from the frame timestamps).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0.0
+
+/// Feature name   : StatFrameRescued
+/// Display name   : Stat Frames Rescued
+/// Tooltip        :
+/// Description    : Number of frames that initially had missing packets but were successfully completed after packet resend.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatFrameShoved
+/// Display name   : Stat Frames Shoved
+/// Tooltip        :
+/// Description    : Number of frames dropped because the transfer of a following frame was completed earlier.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatFrameUnderrun
+/// Display name   : Stat Frames Underrun
+/// Tooltip        :
+/// Description    : Number of frames missed due to the non-availability of a user supplied buffer (buffer underrun).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatLocalRate
+/// Display name   : Stat Local Rate
+/// Tooltip        :
+/// Description    : Rate (frames/s) at which (complete and incomplete) frames have been received by the host (derived from the host clock).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0.0
+
+/// Feature name   : StatPacketErrors
+/// Display name   : Stat Packets Errors
+/// Tooltip        :
+/// Description    : Number of received packets that are erroneous (usually signal an hardware issue on the device).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatPacketMissed
+/// Display name   : Stat Packets Missed
+/// Tooltip        :
+/// Description    : Number of packets expected and not received by the host (not including successfully resent packets).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatPacketReceived
+/// Display name   : Stat Packets Received
+/// Tooltip        :
+/// Description    : Number of error-free packets received and processed by the host (including successfully resent packets).
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatPacketRequested
+/// Display name   : Stat Packets Requested
+/// Tooltip        :
+/// Description    : Number of missing packets that were requested for resend from the device.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatPacketResent
+/// Display name   : Stat Packets Resent
+/// Tooltip        :
+/// Description    : Number of missing packets that were resent by the device after having been requested.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatPacketUnavailable
+/// Display name   : Stat Packets Unavailable
+/// Tooltip        :
+/// Description    : Number of packets that could not be resent by the device after having been requested.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StatTimeElapsed
+/// Display name   : Stat Time Elapsed
+/// Tooltip        :
+/// Description    : Elapsed time (in s) since the streaming was started.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0.0
+
+/// Feature name   : StreamAnnounceBufferMinimum
+/// Display name   : Stream Announce Buffer Minimum
+/// Tooltip        :
+/// Description    : Minimal number of buffers to announce to enable selected acquisition mode.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1
+
+/// Feature name   : StreamAnnouncedBufferCount
+/// Display name   : Stream Announced Buffer Count
+/// Tooltip        :
+/// Description    : Number of announced (known) buffers on this stream.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StreamBufferHandlingMode
+/// Display name   : Stream Buffer Handling Mode
+/// Tooltip        :
+/// Description    : Available buffer handling modes of this stream.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Default
+
+/// Feature name   : StreamBytesPerSecond
+/// Display name   : StreamBytesPerSecond
+/// Tooltip        :
+/// Description    : Bandwidth allocation: the camera will consume up to this bandwidth, in bytes per second. You must set this value if multiple cameras share the same ethernet adapter, otherwise data will be lost. The sum of all StreamBytesPerSecond values of all cameras must not exceed the available bandwidth.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 115000000
+
+/// Feature name   : StreamFrameRateConstrain
+/// Display name   : StreamFrameRateConstrain
+/// Tooltip        :
+/// Description    : When enabled, the frame rate of the camera is constrained by available bandwidth. When disabled, the camera can image faster than it can send data.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : True
+
+/// Feature name   : StreamHoldCapacity
+/// Display name   : StreamHoldCapacity
+/// Tooltip        :
+/// Description    : Maximum number of images (for the current size and format) which can be stored on the camera when StreamHold is enabled.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 33
+
+/// Feature name   : StreamHoldEnable
+/// Display name   : StreamHoldEnable
+/// Tooltip        :
+/// Description    : Control on-camera image storage; this control is like a "pause" button for the image stream. When enabled, images remain stored on the camera, and are not transmitted to the host. When disabled, the image stream resumes, and any stored images are sent to the host.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : Off
+
+/// Feature name   : StreamID
+/// Display name   : Stream ID
+/// Tooltip        :
+/// Description    : Device unique ID for the stream.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : DEV_000F315BA50A-Stream-000
+
+/// Feature name   : StreamType
+/// Display name   : Stream Type
+/// Tooltip        :
+/// Description    : Identifies the transport layer technology of the stream.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : GEV
+
+/// Feature name   : StrobeDelay
+/// Display name   : StrobeDelay
+/// Tooltip        :
+/// Description    : Delay from strobe trigger to strobe output, in microseconds.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StrobeDuration
+/// Display name   : StrobeDuration
+/// Tooltip        :
+/// Description    : Duration of strobe, in microseconds.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : StrobeDurationMode
+/// Display name   : StrobeDurationMode
+/// Tooltip        :
+/// Description    : Mode of the strobe timing unit. Source: strobe duration is the same as source duration. Controlled: strobe duration is set by StrobeDuration.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : Source
+
+/// Feature name   : StrobeSource
+/// Display name   : StrobeSource
+/// Tooltip        :
+/// Description    : Signal source of the strobe timing unit. See SyncOutSource for descriptions.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : FrameTrigger
+
+/// Feature name   : SyncInGlitchFilter
+/// Display name   : SyncInGlitchFilter
+/// Tooltip        :
+/// Description    : Glitch filter on sync-in line, in nanoseconds.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : SyncInLevels
+/// Display name   : SyncInLevels
+/// Tooltip        :
+/// Description    : Momentary logic levels of the hardware line inputs.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : SyncInSelector
+/// Display name   : SyncInSelector
+/// Tooltip        :
+/// Description    : Select the sync-in line to control with {SyncInGlitchFilter}.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : SyncIn1
+
+/// Feature name   : SyncOutLevels
+/// Display name   : SyncOutLevels
+/// Tooltip        :
+/// Description    : Output levels of hardware sync outputs, for output(s) in GPO mode. (Note: SyncOutPolarity can invert these values.)
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : 0
+
+/// Feature name   : SyncOutPolarity
+/// Display name   : SyncOutPolarity
+/// Tooltip        :
+/// Description    : Polarity applied to the sync-out line specified by SyncOutSelector.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : Normal
+
+/// Feature name   : SyncOutSelector
+/// Display name   : SyncOutSelector
+/// Tooltip        :
+/// Description    : Select the sync-out line to control with {SyncOutSource, SyncOutPolarity}.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : SyncOut1
+
+/// Feature name   : SyncOutSource
+/// Display name   : SyncOutSource
+/// Tooltip        :
+/// Description    : Signal source of the sync-out line specified by SyncOutSelector. GPO: general purpose output. AcquisitionTriggerReady: acquisition trigger may occur. FrameTriggerReady: frame trigger may occur. Exposing: exposure in progress. FrameReadout: image readout in progress. Imaging: exposure or frame readout in progress. Acquiring: acquisition is running. LineIn: external line input. Strobe: source is strobe timing unit.
+/// SFNC Namespace : Custom
+/// Unit           :
+/// Value          : Exposing
+
+/// Feature name   : TriggerActivation
+/// Display name   : TriggerActivation
+/// Tooltip        :
+/// Description    : Type of activation, for hardware triggers. This controls edge/level and polarity sensitivities.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : RisingEdge
+
+/// Feature name   : TriggerDelayAbs
+/// Display name   : TriggerDelayAbs
+/// Tooltip        :
+/// Description    : Delay from hardware trigger activation to trigger effect, in microseconds.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 0.0
+
+/// Feature name   : TriggerMode
+/// Display name   : TriggerMode
+/// Tooltip        :
+/// Description    : Enable or disable this trigger. Note: when the FrameStart trigger is disabled, images are triggered at a fixed rate specified by AcquisitionFrameRateAbs.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : On
+
+/// Feature name   : TriggerOverlap
+/// Display name   : TriggerOverlap
+/// Tooltip        :
+/// Description    : Permitted window of trigger activation, relative to previous frame.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Off
+
+/// Feature name   : TriggerSelector
+/// Display name   : TriggerSelector
+/// Tooltip        :
+/// Description    : Select a trigger here, then use the controls {TriggerMode, TriggerSoftware, TriggerSource, TriggerActivation, TriggerOverlap, TriggerDelayAbs} to setup and read the trigger attributes. FrameStart is the trigger which starts each image (when acquisition is running). AcquisitionStart is the trigger which starts the acquisition process.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : FrameStart
+
+/// Feature name   : TriggerSoftware
+/// Display name   : TriggerSoftware
+/// Tooltip        :
+/// Description    : This software command effects a trigger.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : TriggerSource
+/// Display name   : TriggerSource
+/// Tooltip        :
+/// Description    : Source of trigger, when TriggerMode is On. This might be an hardware trigger, a fixed rate generator, or software trigger only.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Freerun
+
+/// Feature name   : UserSetDefaultSelector
+/// Display name   : UserSetDefaultSelector
+/// Tooltip        :
+/// Description    : On power-up or reset, this user set is loaded.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Default
+
+/// Feature name   : UserSetLoad
+/// Display name   : UserSetLoad
+/// Tooltip        :
+/// Description    : Load camera parameters from the user set specified by UserSetSelector.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : UserSetSave
+/// Display name   : UserSetSave
+/// Tooltip        :
+/// Description    : Save camera parameters to the user set specified by UserSetSelector.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : None
+
+/// Feature name   : UserSetSelector
+/// Display name   : UserSetSelector
+/// Tooltip        :
+/// Description    : Select a user set, for loading or saving camera parameters.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : Default
+
+/// Feature name   : Width
+/// Display name   : Width
+/// Tooltip        :
+/// Description    : Width of image, in pixels.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1292
+
+/// Feature name   : WidthMax
+/// Display name   : WidthMax
+/// Tooltip        :
+/// Description    : Maximum image width for the current image mode. Horizontal binning, for example, will change this value.
+/// SFNC Namespace : Standard
+/// Unit           :
+/// Value          : 1292
+
+
+Process finished with exit code 0
