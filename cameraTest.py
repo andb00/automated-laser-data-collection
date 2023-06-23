@@ -13,9 +13,6 @@ from vimba import *
 directory = 'data_collection'
 os.mkdir(directory)
 
-# Prompts user to input number of images to capture
-# iterations = int(input("Enter the number of iterations for the camera to take pictures: "))
-
 # Call for camera to be used
 with Vimba.get_instance() as vimba:
     cams = vimba.get_all_cameras()
