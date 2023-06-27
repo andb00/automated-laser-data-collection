@@ -6,15 +6,14 @@ from PIL.TiffTags import TAGS
 from vimba import *
 
 # Configure settings on Vimba Viewer
-# Allow 16-bit
-# Mono12 packed
+
+# Allow 16-bit 
+# Mono12 packed and/or Mono16
+# Check if images are 16 bit
 
 # Makes a directory to store images
 directory = 'data_collection'
 os.mkdir(directory)
-
-# Prompts user to input number of images to capture
-# iterations = int(input("Enter the number of iterations for the camera to take pictures: "))
 
 # Call for camera to be used
 with Vimba.get_instance() as vimba:
@@ -23,7 +22,7 @@ with Vimba.get_instance() as vimba:
     with cams[0] as cam:
 
         # Camera will capture images for the number of iterations inputted by user
-
+        
         # Activating ChunkMode will allow to grab specific metadata
         chunks = cam.get_feature_by_name("ChunkModeActive")
         chunks.set(True)
