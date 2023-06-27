@@ -7,7 +7,8 @@ from vimba import *
 
 # Configure settings on Vimba Viewer
 # Allow 16-bit 
-# Mono12 packed
+# Mono12 packed and/or Mono16
+# Check if images are 16 bit
 
 # Makes a directory to store images
 directory = 'data_collection'
@@ -20,6 +21,7 @@ with Vimba.get_instance() as vimba:
     with cams[0] as cam:
         # Camera will capture images for the number of iterations inputted by user
 
+        # Set ChunkMode to True in VimbaViewer
         cam.ChunkModeActive.set(True)
 
         for ctr in range(3):
