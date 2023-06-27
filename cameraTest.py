@@ -23,7 +23,13 @@ with Vimba.get_instance() as vimba:
     with cams[0] as cam:
         # Camera will capture images for the number of iterations inputted by user
 
-        cam.ChunkModeActive.set(True)
+        # Activating ChunkMode will allow to grab specific metadata
+        chunks = cam.get_feature_by_name("ChunkModeActive")
+        chunks.set(True)
+
+        # Format of image will initially be set to Mono12Packed
+        pixel_format = cam.get_feature_by_name("PixelFormat")
+        pixel_format.set("Mono12Packed")
 
         for ctr in range(3):
             frame = cam.get_frame()
