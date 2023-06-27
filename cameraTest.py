@@ -6,6 +6,7 @@ from PIL.TiffTags import TAGS
 from vimba import *
 
 # Configure settings on Vimba Viewer
+
 # Allow 16-bit 
 # Mono12 packed and/or Mono16
 # Check if images are 16 bit
@@ -19,10 +20,16 @@ with Vimba.get_instance() as vimba:
     cams = vimba.get_all_cameras()
 
     with cams[0] as cam:
-        # Camera will capture images for the number of iterations inputted by user
 
-        # Set ChunkMode to True in VimbaViewer
-        cam.ChunkModeActive.set(True)
+        # Camera will capture images for the number of iterations inputted by user
+        
+        # Activating ChunkMode will allow to grab specific metadata
+        chunks = cam.get_feature_by_name("ChunkModeActive")
+        chunks.set(True)
+
+        # Format of image will initially be set to Mono12Packed
+        pixel_format = cam.get_feature_by_name("PixelFormat")
+        pixel_format.set("Mono12Packed")
 
         for ctr in range(3):
             frame = cam.get_frame()
