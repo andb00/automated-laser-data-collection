@@ -6,7 +6,7 @@ from PIL.TiffTags import TAGS
 from vimba import *
 
 # Configure settings on Vimba Viewer
-# Allow 16-bit 
+# Allow 16-bit
 # Mono12 packed
 
 # Makes a directory to store images
@@ -21,6 +21,7 @@ with Vimba.get_instance() as vimba:
     cams = vimba.get_all_cameras()
 
     with cams[0] as cam:
+
         # Camera will capture images for the number of iterations inputted by user
 
         # Activating ChunkMode will allow to grab specific metadata
