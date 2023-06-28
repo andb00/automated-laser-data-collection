@@ -1,17 +1,58 @@
 import cv2
 import os
+from tkinter import *
 from PIL import Image
 from PIL.TiffTags import TAGS
-
 from vimba import *
+
 
 # Configure settings on Vimba Viewer
 # Allow 16-bit
 # Mono12 packed
 
-# Makes a directory to store images
-directory = 'data_collection'
-os.mkdir(directory)
+# Function for closing GUI window
+def close():
+    tkWindow.quit()
+
+
+# Will attempt to create directory and notify when if one has already been created
+try:
+    directory = 'data_collection'
+    os.mkdir(directory)
+
+except FileExistsError:
+    print("File already exists. Delete the file and try again.")
+    exit(1)
+
+# Creates GUI window
+tkWindow = Tk()
+tkWindow.geometry('400x150')
+tkWindow.title("Vimba Viewer")
+
+# Text entries for exposure, gamma, and gain
+exposure_prompt = Label(tkWindow, text="Enter Exposure")
+exposure_input = Entry(tkWindow)
+gain_prompt = Label(tkWindow, text="Enter gain")
+gain_input = Entry(tkWindow)
+gamma_prompt = Label(tkWindow, text="Enter gamma")
+gamma_input = Entry(tkWindow)
+
+# The submit button will close the window
+submitButton = Button(tkWindow, text="Submit", command=close)
+
+# Formatting of the text entries
+exposure_prompt.grid(row=0, column=0)
+exposure_input.grid(row=0, column=1)
+
+gain_prompt.grid(row=1, column=0)
+gain_input.grid(row=1, column=1)
+
+gamma_prompt.grid(row=2, column=0)
+gamma_input.grid(row=2, column=1)
+
+submitButton.grid(row=3, column=1)
+
+tkWindow.mainloop()
 
 # Call for camera to be used
 with Vimba.get_instance() as vimba:
@@ -67,5 +108,19 @@ with Vimba.get_instance() as vimba:
             print(f"{tagname:25}: {value}")
 
         exposure = cam.get_feature_by_name("ExposureTimeAbs")
-        exposure.set(15000)
+        exposure.set(exposure_input.get())
         print("Exposure %17s %.1f" % (":", exposure.get()))
+
+        gain = cam.get_feature_by_name("Gain")
+        gain.set(gain_input.get())
+        print("Gain %21s %.1f" % (":", gain.get()))
+
+        gamma = cam.get_feature_by_name("Gamma")
+        gamma.set(gamma_input.get())
+        print("Gamma %20s %.1f" % (":", gamma.get()))
+
+        frame_rate = cam.get_feature_by_name("AcquisitionFrameRateAbs")
+        print("Frame Rate %15s %f" % (":", frame_rate.get()))
+
+        ip_address = cam.get_feature_by_name("GevCurrentIPAddress")
+        print("IP Address %15s %d" % (":", ip_address.get()))
