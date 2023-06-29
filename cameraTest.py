@@ -4,6 +4,7 @@ from tkinter import *
 from PIL import Image
 from PIL.TiffTags import TAGS
 from vimba import *
+from datetime import datetime
 
 
 # Configure settings on Vimba Viewer
@@ -15,9 +16,12 @@ def close():
     tkWindow.quit()
 
 
+now = datetime.now()
+directory = now.strftime("%m-%d-%Y %H-%M-%S")
+
+
 # Will attempt to create directory and notify when if one has already been created
 try:
-    directory = 'data_collection'
     os.mkdir(directory)
 
 except FileExistsError:
@@ -34,8 +38,6 @@ exposure_prompt = Label(tkWindow, text="Enter Exposure")
 exposure_input = Entry(tkWindow)
 gain_prompt = Label(tkWindow, text="Enter gain")
 gain_input = Entry(tkWindow)
-gamma_prompt = Label(tkWindow, text="Enter gamma")
-gamma_input = Entry(tkWindow)
 
 # The submit button will close the window
 submitButton = Button(tkWindow, text="Submit", command=close)
@@ -46,9 +48,6 @@ exposure_input.grid(row=0, column=1)
 
 gain_prompt.grid(row=1, column=0)
 gain_input.grid(row=1, column=1)
-
-gamma_prompt.grid(row=2, column=0)
-gamma_input.grid(row=2, column=1)
 
 submitButton.grid(row=3, column=1)
 
@@ -76,10 +75,10 @@ with Vimba.get_instance() as vimba:
 
             # Image captured by camera will be stored in directory
             save_path = os.path.join(directory, '{}.tiff'.format(ctr + 1))
-            cv2.imwrite(save_path, frame.as_opencv_image())
+            cv2.imwrite(save_path, frame.as_opencv_image(), [259, 1])
 
         # open the image
-        image = Image.open("data_collection/1.tiff")
+        image = Image.open(f"{directory}/1.tiff")
 
         # extracting the exif metadata
         exifdata = image.getexif()
@@ -87,10 +86,6 @@ with Vimba.get_instance() as vimba:
         info_dict = {
             "Filename": image.filename,
             "Image Format": image.format,
-            "Image Mode": image.mode,
-            "Image is Animated": getattr(image, "is_animated", False),
-            "Frames in Image": getattr(image, "n_frames", 1),
-
         }
 
         for label, value in info_dict.items():
@@ -114,10 +109,6 @@ with Vimba.get_instance() as vimba:
         gain = cam.get_feature_by_name("Gain")
         gain.set(gain_input.get())
         print("Gain %21s %.1f" % (":", gain.get()))
-
-        gamma = cam.get_feature_by_name("Gamma")
-        gamma.set(gamma_input.get())
-        print("Gamma %20s %.1f" % (":", gamma.get()))
 
         frame_rate = cam.get_feature_by_name("AcquisitionFrameRateAbs")
         print("Frame Rate %15s %f" % (":", frame_rate.get()))
