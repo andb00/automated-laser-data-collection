@@ -7,7 +7,6 @@ from vimba import *
 from datetime import datetime
 
 
-# Configure settings on Vimba Viewer
 # Allow 16-bit
 # Mono12 packed
 
@@ -16,9 +15,9 @@ def close():
     tkWindow.quit()
 
 
+# Creates date and time for the name of the directory
 now = datetime.now()
 directory = now.strftime("%m-%d-%Y %H-%M-%S")
-
 
 # Will attempt to create directory and notify when if one has already been created
 try:
@@ -30,14 +29,31 @@ except FileExistsError:
 
 # Creates GUI window
 tkWindow = Tk()
-tkWindow.geometry('400x150')
+tkWindow.geometry('300x200')
 tkWindow.title("Vimba Viewer")
 
 # Text entries for exposure, gamma, and gain
-exposure_prompt = Label(tkWindow, text="Enter Exposure")
+exposure_prompt = Label(tkWindow, text="Exposure")
 exposure_input = Entry(tkWindow)
-gain_prompt = Label(tkWindow, text="Enter gain")
+
+gain_prompt = Label(tkWindow, text="Gain")
 gain_input = Entry(tkWindow)
+
+frame_rate_prompt = Label(tkWindow, text="Frame Rate")
+frame_rate_input = Entry(tkWindow)
+
+wavelength_prompt = Label(tkWindow, text="Wavelength")
+wavelength_input = Entry(tkWindow)
+
+beam_size_prompt = Label(tkWindow, text="Beam Size")
+beam_size_input = Entry(tkWindow)
+
+region_prompt = Label(tkWindow, text="Region")
+region_input = Entry(tkWindow)
+
+step_size_prompt = Label(tkWindow, text="Step Size")
+step_size_input = Entry(tkWindow)
+
 
 # The submit button will close the window
 submitButton = Button(tkWindow, text="Submit", command=close)
@@ -49,7 +65,22 @@ exposure_input.grid(row=0, column=1)
 gain_prompt.grid(row=1, column=0)
 gain_input.grid(row=1, column=1)
 
-submitButton.grid(row=3, column=1)
+frame_rate_prompt.grid(row=2, column=0)
+frame_rate_input.grid(row=2, column=1)
+
+wavelength_prompt.grid(row=3, column=0)
+wavelength_input.grid(row=3, column=1)
+
+beam_size_prompt.grid(row=4, column=0)
+beam_size_input.grid(row=4, column=1)
+
+region_prompt.grid(row=5, column=0)
+region_input.grid(row=5, column=1)
+
+step_size_prompt.grid(row=6, column=0)
+step_size_input.grid(row=6, column=1)
+
+submitButton.grid(row=7, column=1)
 
 tkWindow.mainloop()
 
@@ -79,6 +110,11 @@ with Vimba.get_instance() as vimba:
 
         # open the image
         image = Image.open(f"{directory}/1.tiff")
+        image.tag[37000] = int(wavelength_input.get())
+        image.tag[270] = int(beam_size_input.get())
+        image.tag[271] = int(region_input.get())
+        image.tag[272] = int(step_size_input.get())
+        image.save(f"{directory}/1.tiff", tiffinfo=image.tag)
 
         # extracting the exif metadata
         exifdata = image.getexif()
@@ -86,6 +122,10 @@ with Vimba.get_instance() as vimba:
         info_dict = {
             "Filename": image.filename,
             "Image Format": image.format,
+            "Wavelength": str(image.tag[37000]).replace("(", "").replace(")", "").replace(",", ""),
+            "Beam Size": str(image.tag[270]).replace("(", "").replace(")", "").replace(",", ""),
+            "Region": str(image.tag[271]).replace("(", "").replace(")", "").replace(",", ""),
+            "Step Size": str(image.tag[272]).replace("(", "").replace(")", "").replace(",", "")
         }
 
         for label, value in info_dict.items():
@@ -111,6 +151,7 @@ with Vimba.get_instance() as vimba:
         print("Gain %21s %.1f" % (":", gain.get()))
 
         frame_rate = cam.get_feature_by_name("AcquisitionFrameRateAbs")
+        frame_rate.set(frame_rate_input.get())
         print("Frame Rate %15s %f" % (":", frame_rate.get()))
 
         ip_address = cam.get_feature_by_name("GevCurrentIPAddress")
