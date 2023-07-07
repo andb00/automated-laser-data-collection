@@ -19,20 +19,13 @@ def close():
 now = datetime.now()
 directory = now.strftime("%m-%d-%Y %H-%M-%S")
 
-# Will attempt to create directory and notify when if one has already been created
-try:
-    os.mkdir(directory)
-
-except FileExistsError:
-    print("File already exists. Delete the file and try again.")
-    exit(1)
-
 # Creates GUI window
 tkWindow = Tk()
 tkWindow.geometry('300x200')
-tkWindow.title("Vimba Viewer")
+tkWindow.title("Summer 2023 Rotation Phase")
 
-# Text entries for exposure, gamma, and gain
+# Text entries for exposure, gain, frame rate, wavelength, beam size, region,
+# and step size
 exposure_prompt = Label(tkWindow, text="Exposure")
 exposure_input = Entry(tkWindow)
 
@@ -53,7 +46,6 @@ region_input = Entry(tkWindow)
 
 step_size_prompt = Label(tkWindow, text="Step Size")
 step_size_input = Entry(tkWindow)
-
 
 # The submit button will close the window
 submitButton = Button(tkWindow, text="Submit", command=close)
@@ -84,6 +76,15 @@ submitButton.grid(row=7, column=1)
 
 tkWindow.mainloop()
 
+
+directory += "_" + wavelength_input.get() + "nm_r_" + region_input.get() + " " + beam_size_input.get()
+try:
+    os.mkdir(directory)
+
+except FileExistsError:
+    print("File already exists. Delete the file and try again.")
+    exit(1)
+
 # Call for camera to be used
 with Vimba.get_instance() as vimba:
     cams = vimba.get_all_cameras()
@@ -100,7 +101,7 @@ with Vimba.get_instance() as vimba:
         pixel_format = cam.get_feature_by_name("PixelFormat")
         pixel_format.set("Mono12Packed")
 
-        for ctr in range(3):
+        for ctr in range(960):
             frame = cam.get_frame()
             frame.convert_pixel_format(PixelFormat.Mono16)
 
@@ -108,10 +109,11 @@ with Vimba.get_instance() as vimba:
             save_path = os.path.join(directory, '{}.tiff'.format(ctr + 1))
             cv2.imwrite(save_path, frame.as_opencv_image(), [259, 1])
 
+        # finish = time.perf_counter()
         # open the image
         image = Image.open(f"{directory}/1.tiff")
         image.tag[37000] = int(wavelength_input.get())
-        image.tag[270] = int(beam_size_input.get())
+        image.tag[270] = str(beam_size_input.get())
         image.tag[271] = int(region_input.get())
         image.tag[272] = int(step_size_input.get())
         image.save(f"{directory}/1.tiff", tiffinfo=image.tag)
@@ -123,7 +125,8 @@ with Vimba.get_instance() as vimba:
             "Filename": image.filename,
             "Image Format": image.format,
             "Wavelength": str(image.tag[37000]).replace("(", "").replace(")", "").replace(",", ""),
-            "Beam Size": str(image.tag[270]).replace("(", "").replace(")", "").replace(",", ""),
+            "Beam Size": str(image.tag[270]).replace("(", "").replace(")", "").replace(",", "")
+            .replace('\'', '').replace('\'', ''),
             "Region": str(image.tag[271]).replace("(", "").replace(")", "").replace(",", ""),
             "Step Size": str(image.tag[272]).replace("(", "").replace(")", "").replace(",", "")
         }
@@ -156,3 +159,4 @@ with Vimba.get_instance() as vimba:
 
         ip_address = cam.get_feature_by_name("GevCurrentIPAddress")
         print("IP Address %15s %d" % (":", ip_address.get()))
+
