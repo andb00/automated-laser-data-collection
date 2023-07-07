@@ -6,9 +6,9 @@ from PIL.TiffTags import TAGS
 from vimba import *
 from datetime import datetime
 
-
 # Allow 16-bit
 # Mono12 packed
+
 
 # Function for closing GUI window
 def close():
@@ -57,6 +57,7 @@ exposure_input.grid(row=0, column=1)
 gain_prompt.grid(row=1, column=0)
 gain_input.grid(row=1, column=1)
 
+
 frame_rate_prompt.grid(row=2, column=0)
 frame_rate_input.grid(row=2, column=1)
 
@@ -92,7 +93,7 @@ with Vimba.get_instance() as vimba:
     with cams[0] as cam:
 
         # Camera will capture images for the number of iterations inputted by user
-
+        
         # Activating ChunkMode will allow to grab specific metadata
         chunks = cam.get_feature_by_name("ChunkModeActive")
         chunks.set(True)
