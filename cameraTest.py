@@ -110,7 +110,6 @@ with Vimba.get_instance() as vimba:
             save_path = os.path.join(directory, '{}.tiff'.format(ctr + 1))
             cv2.imwrite(save_path, frame.as_opencv_image(), [259, 1])
 
-        # finish = time.perf_counter()
         # open the image
         image = Image.open(f"{directory}/1.tiff")
         image.tag[37000] = int(wavelength_input.get())
