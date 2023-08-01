@@ -1,6 +1,8 @@
 **vimbaCamera**
 Project for Vimba Camera automation
 
+For better display, view this as a code. 
+
 Connecting Camera:
 
 **PC-Beamage**
