@@ -44,9 +44,18 @@ Set up:
               5. To synchronize the Rotating Phase Plate with a camera, you can calculate the steps you need with fps
               the camera.
               6. To have more control of the device, you can develop and use a code to configure the settings. 
-              You can enter the code in the "Text Program" Section
-              
-              EXAMPLE CODE: 
+              You can enter the code in the "Text Program" Section.
+              *This code was used for an experiment. This was used to synchronize with a camera that will 
+              capture 960 images. The fps used was 20. 
+              *The manual contains all the code syntax and functions for the software.
+              7. You can save your code and use it later. 
+              8. After inputting your code, make sure to "compile", "download", and "Upload".
+              9. This will allow you to run the code.
+              10. After each run, make sure in the "STATUS" section that the "Postion" is at zero, or reset. 
+              11. If you need to use another application or want to stop the access to the rotor device, click
+              "Enable" and make sure the box is unchecked.
+
+              EXAMPLE CODE:
     
                             HSPD=1000
                             LSPD=100
@@ -61,19 +70,6 @@ Set up:
                               V1=V1+1
                             ENDWHILE
                             END
-                            
-              .
-
-     
-              *This code was used for an experiment. This was used to synchronize with a camera that will 
-              capture 960 images. The fps used was 20. 
-              *The manual contains all the code syntax and functions for the software.
-              7. You can save your code and use it later. 
-              8. After inputting your code, make sure to "compile", "download", and "Upload".
-              9. This will allow you to run the code.
-              10. After each run, make sure in the "STATUS" section that the "Postion" is at zero, or reset. 
-              11. If you need to use another application or want to stop the access to the rotor device, click
-              "Enable" and make sure the box is unchecked.
               
  
               
