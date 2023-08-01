@@ -71,6 +71,7 @@ Set up:
               10. After each run, make sure in the "STATUS" section that the "Postion" is at zero, or reset. 
               11. If you need to use another application or want to stop the access to the rotor device, click
               "Enable" and make sure the box is unchecked.
+              
  
               
 
