@@ -63,7 +63,8 @@ Set up:
                             END
         
 
-                      
+
+              **CONTINUE:        
               *This code was used for an experiment. This was used to synchronize with a camera that will 
               capture 960 images. The fps used was 20. 
               *The manual contains all the code syntax and functions for the software.
