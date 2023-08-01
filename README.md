@@ -15,7 +15,9 @@ Set up:
               Choose the desired image format. 
               Recommended: Save the image as a .bmg file and as a .txt file.
               
-              *The display of the image can be changed if you look at the bottom of the window. For our project we used both 3D                 and 2D. Display to check the image for adjustments. The image should be centered. The software should let you                    zoom in and out of the image which helps in adjustments.
+              *The display of the image can be changed if you look at the bottom of the window. For our project we used both
+              and 2D. Display to check the image for adjustments. The image should be centered. The software should let you
+              zoom in and out of the image which helps in adjustments.
 
 
             
