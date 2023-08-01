@@ -14,9 +14,8 @@ Set up:
               4. Then to capture and save the image, click "Save Current Image" and from the drop-menu,
               Choose the desired image format. 
               Recommended: Save the image as a .bmg file and as a .txt file.
-
-              Additional Information:
-              The display of the image can be changed if you look at the bottom of the window. For our project we used both 3D                 and 2D. Display to check the image for adjustments. The image should be centered. The software should let you zoom               in and out of the image which helps in adjustments.
+              
+              *The display of the image can be changed if you look at the bottom of the window. For our project we used both 3D                 and 2D. Display to check the image for adjustments. The image should be centered. The software should let you                    zoom in and out of the image which helps in adjustments.
 
 
             
