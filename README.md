@@ -42,29 +42,27 @@ Set up:
               the camera.
               6. To have more control of the device, you can develop and use a code to configure the settings. 
               You can enter the code in the "Text Program" Section
-              EXAMPLE: 
-
               
-                        HSPD=1000
-                        LSPD=100
-                        ACC=300
-                        EO=1
-                        V1=0
-                        V2=0
-                        WHILE V1 < 960
-                          XV2
-                          DELAY=65
-                          V2=V2+10
-                          V1=V1+1
-                        ENDWHILE
-                        END
+              EXAMPLE CODE: 
+    
+                            HSPD=1000
+                            LSPD=100
+                            ACC=300
+                            EO=1
+                            V1=0
+                            V2=0
+                            WHILE V1 < 960
+                              XV2
+                              DELAY=65
+                              V2=V2+10
+                              V1=V1+1
+                            ENDWHILE
+                            END
 
                       
  *This code was used for an experiment. This was used to synchronize with a camera that will 
   capture 960 images. The fps used was 20. 
 *The manual contains all the code syntax and functions for the software.
-
-
               7. You can save your code and use it later. 
               8. After inputting your code, make sure to "compile", "download", and "Upload".
               9. This will allow you to run the code.
