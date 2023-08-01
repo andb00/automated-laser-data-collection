@@ -62,6 +62,7 @@ Set up:
               capture 960 images. The fps used was 20. 
               *The manual contains all the code syntax and functions for the software.
 
+
               7. You can save your code and use it later. 
               8. After inputting your code, make sure to "compile", "download", and "Upload".
               9. This will allow you to run the code.
