@@ -3,7 +3,45 @@ Project for Vimba Camera automation
 
 For better display, view this as a code. 
 
-Connecting Camera:
+**Connecting Camera and Program Info**
+
+When connecting camera, make sure to not have Vimba Viewer running in the background otherwise the program will not run.
+VimbaPython package must be installed to access camera
+The current setup in the code allows images to be captured in 16-bit format by setting the pixel format to Mono12Packed.
+The code for the camera is in cameraTest.py
+The full list for all camera features are in Camera_Features.txt
+
+To configure a camera setting, create a variable and set it to cam.get_feature_by_name('insert camera feature from Camera_Features.txt')
+Example:
+
+pixel_format = cam.get_feature_by_name("PixelFormat")
+
+pixel_format.set("Mono12Packed")
+
+
+Chunks mode should already be set to True, otherwise use the following snipet:
+
+chunks = cam.get_feature_by_name("ChunkModeActive")
+
+chunks.set(True)
+
+Program includes a GUI that allows to set camera settings (Exposure, Gain, Frame Rate)
+Entires for the wavelength, beam size, step size, and region are used for file naming convention and attach as metadata to images
+After data collection, it will print out metadata to console.
+
+**Packages:**
+
+tkinter
+
+os
+
+datetime
+
+opencv-python (pip install)
+
+Pillow (pip install)
+
+VimbaPython (must download from alliedvision/VimbaPython GitHub repository)
 
 **PC-Beamage**
 For creating beam profiles for the laser diodes and collimating lenses. 
