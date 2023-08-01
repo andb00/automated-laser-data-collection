@@ -45,19 +45,19 @@ Set up:
               EXAMPLE: 
 
               
-                      HSPD=1000
-                      LSPD=100
-                      ACC=300
-                      EO=1
-                      V1=0
-                      V2=0
-                      WHILE V1 < 960
-                        XV2
-                        DELAY=65
-                        V2=V2+10
-                        V1=V1+1
-                      ENDWHILE
-                      END
+                        HSPD=1000
+                        LSPD=100
+                        ACC=300
+                        EO=1
+                        V1=0
+                        V2=0
+                        WHILE V1 < 960
+                          XV2
+                          DELAY=65
+                          V2=V2+10
+                          V1=V1+1
+                        ENDWHILE
+                        END
 
                       
  *This code was used for an experiment. This was used to synchronize with a camera that will 
