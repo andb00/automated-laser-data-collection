@@ -43,6 +43,7 @@ Set up:
               6. To have more control of the device, you can develop and use a code to configure the settings. 
               You can enter the code in the "Text Program" Section
               EXAMPLE: 
+
               
                       HSPD=1000
                       LSPD=100
@@ -58,9 +59,10 @@ Set up:
                       ENDWHILE
                       END
 
-              *This code was used for an experiment. This was used to synchronize with a camera that will 
-              capture 960 images. The fps used was 20. 
-              *The manual contains all the code syntax and functions for the software.
+                      
+ *This code was used for an experiment. This was used to synchronize with a camera that will 
+  capture 960 images. The fps used was 20. 
+*The manual contains all the code syntax and functions for the software.
 
 
               7. You can save your code and use it later. 
