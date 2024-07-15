@@ -11,7 +11,7 @@ The current setup in the code allows images to be captured in 16-bit format by s
 The code for the camera is in cameraTest.py
 The full list for all camera features are in Camera_Features.txt
 
-To configure a camera setting, create a variable and set it to cam.get_feature_by_name('insert camera feature from Camera_Features.txt')
+To configure a camera setting, create a variable and set it to ```cam.get_feature_by_name('insert camera feature from Camera_Features.txt')```
 
 Example:
 ```python
